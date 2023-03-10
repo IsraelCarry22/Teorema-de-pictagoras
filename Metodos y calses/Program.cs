@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,7 +38,8 @@ namespace Metodos_y_calses
                         Console.Write("Cateto Opuesto: ");
                         cateto_OP = double.Parse(Console.ReadLine());
 
-                        Console.WriteLine("Area del triangulo es: " + TR.Area_triangulo(cateto_OP,cateto_AD));
+                        Console.WriteLine("Area del triangulo es: " + TR.teorema_pictagoras(cateto_OP,cateto_AD));
+                        Console.WriteLine("Pulsa cualquier tecla para continuar...");
                         break;
                     case 2:
                         Console.Clear();
@@ -49,7 +50,8 @@ namespace Metodos_y_calses
                         Console.Write("Hipotenusa: ");
                         Hip = double.Parse(Console.ReadLine());
 
-                        Console.WriteLine("Area del triangulo es: " + TR.Perimetro_triangulo(cateto_OP,cateto_AD,Hip));
+                        Console.WriteLine("Area del triangulo es: " + TR.teorema_pictagoras(cateto_OP,cateto_AD,Hip));
+                        Console.WriteLine("Pulsa cualquier tecla para continuar...");
                         break;
                     case 3:
                         Console.Clear();
@@ -59,6 +61,7 @@ namespace Metodos_y_calses
                         Hip = double.Parse(Console.ReadLine());
 
                         Console.WriteLine("Cateto Opuesto es: " + TR.Cal_Cateto_Opuesto(cateto_AD,Hip));
+                        Console.WriteLine("Pulsa cualquier tecla para continuar...");
                         break;
                     case 4:
                         Console.Clear();
@@ -68,6 +71,7 @@ namespace Metodos_y_calses
                         Hip = double.Parse(Console.ReadLine());
 
                         Console.WriteLine("Cateto Adyacente es: " + TR.Cal_Cateto_Adyacente(cateto_OP, Hip));
+                        Console.WriteLine("Pulsa cualquier tecla para continuar...");
                         break;
                     case 5:
                         Console.Clear();
@@ -77,6 +81,7 @@ namespace Metodos_y_calses
                         cateto_OP = double.Parse(Console.ReadLine());
 
                         Console.WriteLine("Hipotenusa es: " + TR.Cal_Hipotenusa(cateto_OP, cateto_AD));
+                        Console.WriteLine("Pulsa cualquier tecla para continuar...");
                         break;
                     case 6:
                         Console.Clear();
@@ -92,12 +97,12 @@ namespace Metodos_y_calses
             }
         }
 
-        public double Area_triangulo(double Cateto_Opuesto, double Cateto_Adyacente)
+        public double teorema_pictagoras(double Cateto_Opuesto, double Cateto_Adyacente)
         {
             return (Cateto_Adyacente * Cateto_Opuesto / 2);
         }
 
-        public double Perimetro_triangulo(double Cateto_Opuesto, double Cateto_Adyacente, double Hipotenusa)
+        public double teorema_pictagoras(double Cateto_Opuesto, double Cateto_Adyacente, double Hipotenusa)
         {
             return (Cateto_Adyacente + Cateto_Opuesto + Hipotenusa);
         }
